@@ -8,7 +8,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 export default function Exam_word() {
-  const ref = useRef();
+  const ref1= useRef();
+  const ref2= useRef();
+  const ref3= useRef();
+  const ref4= useRef();
 
 
   const handleOK = (signature) => {
@@ -27,17 +30,27 @@ export default function Exam_word() {
   };
 
   const handleClear = () => {
-    ref.current.clearSignature();
+    console.log("clear");
+    ref1.current.clearSignature();
+    ref2.current.clearSignature();
+    ref3.current.clearSignature();
+    ref4.current.clearSignature();
   };
 
   const handleConfirm = () => {
-    console.log("end");
-    ref.current.readSignature();
+    console.log("save");
+    ref1.current.readSignature();
+    ref2.current.readSignature();
+    ref3.current.readSignature();
+    ref4.current.readSignature();
 
   };
   const handleUndo = () => {
     console.log("undo");
-    ref.current.undo()
+    ref1.current.undo()
+    ref2.current.undo()
+    ref3.current.undo()
+    ref4.current.undo()
   };
 
 
@@ -57,7 +70,7 @@ export default function Exam_word() {
 
   
   <SignatureScreen style={{width : imgWidth, height: imgHeight }}
-    ref={ref}
+    ref={ref1}
     bgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFq-uwQ1be8k03yZTxhVhyA5XtwoSI-rBMDQ&usqp=CAU"
     bgWidth={imgWidth}
     bgHeight={imgHeight}
@@ -65,7 +78,7 @@ export default function Exam_word() {
     onOK={handleOK}
   />
    <SignatureScreen style={{width : imgWidth, height: imgHeight}}
-    ref={ref}
+    ref={ref2}
     bgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFq-uwQ1be8k03yZTxhVhyA5XtwoSI-rBMDQ&usqp=CAU"
     bgWidth={imgWidth}
     bgHeight={imgHeight}
@@ -73,7 +86,7 @@ export default function Exam_word() {
     onOK={handleOK}
   />
   <SignatureScreen style={{width : imgWidth, height: imgHeight }}
-    ref={ref}
+    ref={ref3}
     bgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFq-uwQ1be8k03yZTxhVhyA5XtwoSI-rBMDQ&usqp=CAU"
     bgWidth={imgWidth}
     bgHeight={imgHeight}
@@ -81,7 +94,7 @@ export default function Exam_word() {
     onOK={handleOK}
   />
    <SignatureScreen style={{width : imgWidth, height: imgHeight }}
-    ref={ref}
+    ref={ref4}
     bgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFq-uwQ1be8k03yZTxhVhyA5XtwoSI-rBMDQ&usqp=CAU"
     bgWidth={imgWidth}
     bgHeight={imgHeight}
